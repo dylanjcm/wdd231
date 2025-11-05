@@ -213,11 +213,11 @@ h2 {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007EA7;
+    background-color: #00171F;
     color: white;
     cursor: pointer;
 }
 
 #filter-buttons button:hover {
-    background-color: #00A8E8;
+    background-color: #012632;
 }
