@@ -4,18 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Test Index</title>
+    <title>WDD 231 - Homepage</title>
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <meta name="description" content="Homepage for WDD 231 - Web Development">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/index.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>WDD 231 - Test Index</h1>
+        <img src="images/home.svg" alt="Home Icon" width="512" height="512">
+        <span>Dylan Calderon</span>
+        <button id="ham-btn" class="hamburger"></button>
     </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
     <main>
-        <p>Hello World</p>
+        <h1>Home</h1>
+        <section class="info-box" id="about-box">
+            <h2>About me</h2>
+            <p>This is the homepage for the WDD 231 course.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi nam doloremque odio laboriosam labore
+                corrupti voluptatem rerum dolor incidunt amet?</p>
+        </section>
+        <section class="info-box" id="photo-box">
+            <h2>Student Photo</h2>
+            <img src="images/dylanimage.webp" alt="Student Photo" width="128" height="128">
+        </section>
+        <section class="info-box" id="courses-box">
+            <h2>Web Certificate Courses</h2>
+            <div id="filter-buttons">
+                <button data-filter="all">All Courses</button>
+                <button data-filter="WDD">WDD</button>
+                <button data-filter="CSE">CSE</button>
+            </div>
+            <div id="course-list"></div>
+        </section>
     </main>
     <footer>
-        <p>© 2024 WDD 231 Course</p>
+        <div class="social">
+            <a href=""><img src="images/github.svg" alt="github icon" width="16" height="16"></a>
+            <a href=""><img src="images/linkedin.svg" alt="linkedin icon" width="16" height="16"></a>
+            <a href=""><img src="images/whatsapp.svg" alt="whatsapp icon" width="16" height="16"></a>
+        </div>
+        <span id="currentyear"></span>
+        <p id="last-modified"></p>
     </footer>
 </body>
 
