@@ -1,0 +1,61 @@
+/* larger.css — Styles for screens 800px and wider */
+@media only screen and (min-width: 800px) {
+    .header-inner {
+        padding: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: none;
+        /* hide hamburger on desktop */
+    }
+
+    /* NAV inline */
+    .main-nav {
+        display: block !important;
+        border-top: none;
+    }
+
+    .main-nav ul {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    /* Directory grid: 3 columns */
+    .directory.grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Optional: footer layout side-by-side */
+    .site-footer .container {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .hero {
+        width: 100%;
+        margin: 0 auto;
+        text-align: end;
+    }
+
+
+    .hero img {
+        width: 100%;
+    }
+
+    .home-sections {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .home-sections h1 {
+        grid-column: 1 / 4;
+    }
+
+}

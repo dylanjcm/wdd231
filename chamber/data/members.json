@@ -1,0 +1,64 @@
+{
+  "members": [
+    {
+      "name": "Ibirapuera Design Studio",
+      "address": "R. da Consolação, 3000 - Consolação, São Paulo - SP",
+      "phone": "+55 11 99999-0002",
+      "website": "https://ibirapuera-design.example",
+      "image": "businesses/ibirapuera.jpg",
+      "membership": 2,
+      "category": "Design",
+      "description": "Branding and product design studio."
+    },
+    {
+      "name": "Mercado Verde",
+      "address": "R. 25 de Março 1200 - Centro, São Paulo - SP",
+      "phone": "+55 11 99999-0003",
+      "website": "https://mercadoverde.example",
+      "image": "businesses/mercadoverde.jpg",
+      "membership": 1,
+      "category": "Retail",
+      "description": "Local market offering fresh produce."
+    },
+    {
+      "name": "SP Tech Labs",
+      "address": "Av. Brigadeiro Faria Lima, 2500 - Itaim Bibi, São Paulo - SP",
+      "phone": "+55 11 99999-0004",
+      "website": "https://sptl.example",
+      "image": "businesses/sptech.jpg",
+      "membership": 3,
+      "category": "Technology",
+      "description": "Startup accelerator and coworking."
+    },
+    {
+      "name": "Bixiga Bakery",
+      "address": "R. 13 de Maio, 123 - Bixiga, São Paulo - SP",
+      "phone": "+55 11 99999-0005",
+      "website": "https://bixigabakery.example",
+      "image": "businesses/bixiga.jpg",
+      "membership": 2,
+      "category": "Food",
+      "description": "Traditional bakery with artisanal breads."
+    },
+    {
+      "name": "Green Mobility",
+      "address": "Av. Rebouças, 900 - Pinheiros, São Paulo - SP",
+      "phone": "+55 11 99999-0006",
+      "website": "https://greenmobility.example",
+      "image": "businesses/greenmobility.jpg",
+      "membership": 1,
+      "category": "Services",
+      "description": "Eco-friendly transport and rental services."
+    },
+    {
+      "name": "Centro de Idiomas SP",
+      "address": "R. Augusta, 800 - Jardins, São Paulo - SP",
+      "phone": "+55 11 99999-0007",
+      "website": "https://idiomassp.example",
+      "image": "businesses/idiomassp.jpg",
+      "membership": 2,
+      "category": "Education",
+      "description": "Language school offering Portuguese and English courses."
+    }
+  ]
+}
