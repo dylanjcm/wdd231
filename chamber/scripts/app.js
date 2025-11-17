@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav.classList.toggle('open');
 
         // 🔄 toggle icon
-        menuIcon.textContent = newState ? "❌" : "🍔";
+        menuIcon.textContent = newState ? "✖" : "☰";
     });
 
     // DARK MODE TOGGLE

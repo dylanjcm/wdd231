@@ -24,13 +24,19 @@ body {
 .site-header {
     background: #fff;
     border-bottom: 1px solid #ddd;
+    position: relative;
+    z-index: 1001;
+    margin: 0 5px;
+    width: 100%;
 }
 
-.header-inner {
+.container.header-inner {
     display: grid;
     grid-template-columns: 48px 3fr 1fr 48px;
     align-items: baseline;
     padding: 0.75rem 1rem;
+    margin: 0 auto;
+    max-width: 1100px;
 }
 
 .header-inner h1 {
@@ -50,12 +56,16 @@ body {
     background: #fff;
     border-top: 1px solid #ddd;
     width: 100%;
-    top: 100%;      /* ⬅ Pushes it directly below the header */
+    top: 100%;     /* ⬅ Pushes it directly below the header */
 }
 
 .main-nav.open {
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    z-index: 1000;
 }
 
 .menu-toggle {
@@ -73,6 +83,7 @@ body {
     margin: 0;
     text-align: center;
     grid-column: 1 / 5;
+    width: 100%;
 }
 
 .main-nav li {
@@ -86,6 +97,11 @@ body {
     grid-column: 1 / 5;
 }
 
+.main-nav li:hover {
+    color: var(--primary);
+    background: #f0f0f0;
+}
+
 /* DIRECTORY */
 .container {
     max-width: 1100px;
@@ -96,6 +112,7 @@ body {
 .directory {
     display: grid;
     gap: 1rem;
+    margin: 0 auto;
 }
 
 .directory.grid-view {
@@ -116,10 +133,15 @@ body {
     display: flex;
     gap: 1rem;
     margin-top: 5px;
+    max-width: fit-content;
 }
 
 .card h3 {
     color: var(--text);
+}
+
+.card .card-body {
+    max-width: fit-content;
 }
 
 .card-body h3 {
@@ -140,18 +162,12 @@ body {
 
 .card-body {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 0.4fr 1fr;
 }
 
 .card-body p {
     grid-column: 2 / 3;
-}
-
-.card-body img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 6px;
+    margin-right: 10px;
 }
 
 .card-body span {
@@ -161,12 +177,12 @@ body {
 
 .card-title {
     font-size: 1.2rem;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .card-body img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -336,4 +352,6 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-
+#menu-icon {
+    font-size: 2rem;
+}
