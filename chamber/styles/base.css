@@ -59,6 +59,7 @@ body {
     top: 100%;     /* ⬅ Pushes it directly below the header */
 }
 
+
 .main-nav.open {
     display: flex;
     flex-wrap: wrap;
@@ -100,6 +101,10 @@ body {
 .main-nav li:hover {
     color: var(--primary);
     background: #f0f0f0;
+}
+
+a.active {
+    color: var(--accent);
 }
 
 /* DIRECTORY */

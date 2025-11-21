@@ -219,47 +219,78 @@ document.addEventListener("DOMContentLoaded", () => {
             <p><strong>${event.title}</strong><br>${event.date}</p>
         `)
         .join("");
+    // -----------------------------
+    // REAL WEATHER USING OPENWEATHER
+    // -----------------------------
 
 
-    // ----------------------------------
-    // 2) CURRENT WEATHER (fake numbers)
-    // ----------------------------------
-    const currentWeather = {
-        temp: "75°F",
-        condition: "Partly Cloudy",
-        high: "80°F",
-        low: "60°F",
-        humidity: "45%",
-        sunrise: "6:45 AM",
-        sunset: "6:10 PM"
-    };
 
-    const currentEl = document.getElementById("current-weather-data");
+    // TitleCase function for weather descriptions
+    function toTitleCase(str) {
+        return str
+            .toLowerCase()
+            .split(" ")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+    }
 
-    currentEl.innerHTML = `
-        <p><strong>⛅${currentWeather.temp}</strong></p>
-        <p>${currentWeather.condition}</p>
-        <p>High: <strong>${currentWeather.high}</strong></p>
-        <p>Low: <strong>${currentWeather.low}</strong></p>
-        <p>Humidity: <strong>${currentWeather.humidity}</strong></p>
-        <p>Sunrise: <strong>${currentWeather.sunrise}</strong></p>
-        <p>Sunset: <strong>${currentWeather.sunset}</strong></p>
-    `;
+    // Weather API
+    const API_KEY = "b6cf7594d10bbf6110322d54ed6d99f1";
+    const CITY_ID = "3448439"; // São Paulo
 
+    async function loadCurrentWeather() {
+        try {
+            const url = `https://api.openweathermap.org/data/2.5/weather?id=${CITY_ID}&appid=${API_KEY}&units=metric`;
+            const res = await fetch(url);
+            const data = await res.json();
 
-    // ----------------------------------
-    // 3) WEATHER FORECAST (fake numbers)
-    // ----------------------------------
-    const forecastData = [
-        { day: "Today", temp: "76°F" },
-        { day: "Wednesday", temp: "81°F" },
-        { day: "Thursday", temp: "79°F" }
-    ];
+            const currentEl = document.getElementById("current-weather-data");
 
-    const forecastEl = document.getElementById("forecast-data");
+            currentEl.innerHTML = `
+                    <p><strong>${Math.round(data.main.temp)}°C</strong></p>
+                    <p>${toTitleCase(data.weather[0].description)}</p>
+                    <p>High: <strong>${Math.round(data.main.temp_max)}°C</strong></p>
+                    <p>Low: <strong>${Math.round(data.main.temp_min)}°C</strong></p>
+                    <p>Humidity: <strong>${data.main.humidity}%</strong></p>
+                    <p>Wind: <strong>${data.wind.speed} m/s</strong></p>
+                `;
+        } catch (error) {
+            console.error("Weather error:", error);
+            document.getElementById("current-weather-data").innerHTML =
+                "<p>Unable to load weather.</p>";
+        }
+    }
 
-    forecastEl.innerHTML = forecastData
-        .map(item => `<p>${item.day}: <strong>${item.temp}</strong></p>`)
-        .join("");
+    async function loadForecast() {
+        try {
+            const url = `https://api.openweathermap.org/data/2.5/forecast?id=${CITY_ID}&appid=${API_KEY}&units=metric`;
+            const res = await fetch(url);
+            const data = await res.json();
 
+            const forecastEl = document.getElementById("forecast-data");
+            forecastEl.innerHTML = "";
+
+            // Choose the next 3 days at 12:00:00
+            const days = data.list.filter(i => i.dt_txt.includes("12:00:00")).slice(0, 3);
+
+            days.forEach(day => {
+                const date = new Date(day.dt_txt).toLocaleDateString("en-US", {
+                    weekday: "long"
+                });
+
+                forecastEl.innerHTML += `
+                        <p>${date}: <strong>${Math.round(day.main.temp)}°C</strong></p>
+                    `;
+            });
+        } catch (error) {
+            console.error("Forecast error:", error);
+            document.getElementById("forecast-data").innerHTML =
+                "<p>Unable to load forecast.</p>";
+        }
+    }
+
+    // Run weather functions
+    loadCurrentWeather();
+    loadForecast();
 });
+

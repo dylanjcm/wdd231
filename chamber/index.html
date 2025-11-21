@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory - São Paulo Chamber of Commerce</title>
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <meta name="description" content="Directory Page for the São Paulo Chamber of Commerce Website">
+    <meta property="og:title" content="Directory - São Paulo Chamber of Commerce">
+    <meta property="og:description"
+        content="Home Page for the São Paulo Chamber of Commerce Website with landing page information and navigation links.">
+    <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage-directory.webp">
+    <meta property="og:url" content="https://dylanjcm.github.io/wdd231/index.html">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <img src="images/favicon.ico" alt="São Paulo Chamber of Commerce Logo" class="logo" width="32" height="32">
+            <h1 class="site-title">São Paulo Chamber of Commerce</h1>
+
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="dark-toggle" class="dark-toggle" aria-label="Toggle Dark Mode"><img id="dark-icon"
+                    src="images/circle-half.svg" alt="Toggle Dark Mode" width="28" height="28"></button>
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Menu">
+                <span id="menu-icon">☰</span>
+            </button>
+
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section class="hero">
+            <img src="images/hero.webp" alt="São Paulo Skyline" class="hero-img">
+            <!-- 🎟 KEYNOTE TICKETS BUTTON -->
+            <a href="#" class="tickets-btn">Keynote Tickets</a>
+        </section>
+        <section class="home-sections">
+            <h2 id="home-sections-h2">Home</h2>
+
+            <!-- EVENTS -->
+            <div class="home-card events">
+                <h2>Events</h2>
+                <div class="events-content">
+                    <!-- You can fill this with real events later -->
+                    <p>No upcoming events yet.</p>
+                </div>
+            </div>
+
+            <!-- CURRENT WEATHER -->
+            <div class="home-card current-weather">
+                <h2>Current Weather</h2>
+                <div id="current-weather-data" class="weather-content">
+                    <!-- Weather JS will populate this -->
+                    <p>Loading...</p>
+                </div>
+            </div>
+
+            <!-- WEATHER FORECAST -->
+            <div class="home-card forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast-data" class="forecast-content">
+                    <!-- Forecast JS will populate this -->
+                    <p>Loading...</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="controls" aria-label="Directory controls">
+            <div class="view-controls" role="group" aria-label="Choose view">
+                <button id="grid-view" aria-pressed="true">Grid</button>
+                <button id="list-view" aria-pressed="false">List</button>
+                <label for="filter-category">Category:</label>
+                <select id="filter-category">
+                    <option value="all">All</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="directory" class="directory grid-view" aria-live="polite">
+            <!-- Member cards inserted here by JS -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>São Paulo Chamber of Commerce</p>
+                <p>Email: info@spchamber.example | Phone: +55 11 4000-0000</p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/dylanjcm/wdd231"><img class="social-icon" src="images/github.svg"
+                        alt="github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/dylan-calderon-6354aa339"><img class="social-icon"
+                        src="images/linkedin.svg" alt="linkedin icon" width="32" height="32"></a>
+                <a href="https://wa.me/5511932115550"><img class="social-icon" src="images/whatsapp.svg"
+                        alt="whatsapp icon" width="32" height="32"></a>
+            </div>
+            <div class="dev-info">
+                <p>Prepared by: Dylan Janesky Calderon Machado</p>
+                <p>Course: WDD 231</p>
+                <p>&copy; <span id="copyright-year"></span> São Paulo Chamber of Commerce</p>
+                <p>Last modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
