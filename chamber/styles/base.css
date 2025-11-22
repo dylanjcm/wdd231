@@ -127,7 +127,6 @@ a.active {
     display: grid;
     gap: 1rem;
     margin: 0 auto;
-    min-width: none;
 }
 
 .directory.grid-view {
