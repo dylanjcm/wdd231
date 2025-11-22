@@ -48,13 +48,6 @@ body {
     font-size: 1.5rem;
 }
 
-.menu-toggle {
-    background: none;
-    border: 1px solid var(--primary);
-    padding: 0.35rem 0.6rem;
-    border-radius: 6px;
-}
-
 /* NAV - mobile collapsed */
 .main-nav {
     display: none;
@@ -342,6 +335,9 @@ a.active {
     border-radius: 22px;
 }
 
+.dev-info {
+    margin-left: 10px;
+}
 .dark-mode .social a:hover {
     background-color: #555;
 }
