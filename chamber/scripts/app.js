@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="tagline">${m.tagline || m.description || "No tagline available"}</p>
 
                 <!-- 3. IMAGE OR PLACEHOLDER -->
-                <span>Image Placeholder${imageHTML}</span>
+                <span>${imageHTML}</span>
 
                 <!-- 4. ADDRESS -->
                 <p class="address"><strong>Address:</strong> ${m.address || "Not provided"}</p>
@@ -294,3 +294,50 @@ document.addEventListener("DOMContentLoaded", () => {
     loadForecast();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    loadSpotlights();
+});
+
+async function loadSpotlights() {
+    try {
+        const res = await fetch(DATA_PATH);
+        const data = await res.json();
+        const members = data.members || [];
+
+        // Gold = 3, Silver = 2
+        const filtered = members.filter(m => m.membership === 3 || m.membership === 2);
+
+        // Shuffle randomly
+        const shuffled = filtered.sort(() => 0.5 - Math.random());
+
+        // Pick random 2 or 3
+        const count = Math.random() < 0.5 ? 2 : 3;
+        const selected = shuffled.slice(0, count);
+
+        const container = document.getElementById("spotlight-container");
+
+        container.innerHTML = selected.map(m => `
+            <div class="spotlight-card">
+                
+                ${m.image && m.image !== "" 
+                    ? `<img src="${m.image}" alt="${m.name} logo" class="spotlight-img">`
+                    : `<div class="img-placeholder">Image Placeholder</div>`
+                }
+
+                <h3>${m.name}</h3>
+
+                <p><strong>Address:</strong> ${m.address}</p>
+                <p><strong>Phone:</strong> ${m.phone}</p>
+
+                <p><a href="${m.website}" target="_blank">Visit Website</a></p>
+
+                <p class="member-level">
+                    <strong>${m.membership === 3 ? "Gold Member" : "Silver Member"}</strong>
+                </p>
+            </div>
+        `).join("");
+        
+    } catch (err) {
+        console.error("Spotlight error:", err);
+    }
+}

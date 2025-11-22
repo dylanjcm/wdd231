@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory - São Paulo Chamber of Commerce</title>
+    <title>Home - São Paulo Chamber of Commerce</title>
     <meta name="author" content="Dylan Janesky Calderon Machado">
-    <meta name="description" content="Directory Page for the São Paulo Chamber of Commerce Website">
-    <meta property="og:title" content="Directory - São Paulo Chamber of Commerce">
+    <meta name="description" content="Home Page for the São Paulo Chamber of Commerce Website">
+    <meta property="og:title" content="Home - São Paulo Chamber of Commerce">
     <meta property="og:description"
         content="Home Page for the São Paulo Chamber of Commerce Website with landing page information and navigation links.">
-    <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage-directory.webp">
+    <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage.webp">
     <meta property="og:url" content="https://dylanjcm.github.io/wdd231/index.html">
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <link rel="stylesheet" href="styles/index.css">
     <script src="scripts/app.js" defer></script>
 </head>
 
@@ -85,20 +84,11 @@
             </div>
 
         </section>
-        <section class="controls" aria-label="Directory controls">
-            <div class="view-controls" role="group" aria-label="Choose view">
-                <button id="grid-view" aria-pressed="true">Grid</button>
-                <button id="list-view" aria-pressed="false">List</button>
-                <label for="filter-category">Category:</label>
-                <select id="filter-category">
-                    <option value="all">All</option>
-                </select>
-            </div>
+        <section class="home-card" id="spotlights">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container"></div>
         </section>
 
-        <section id="directory" class="directory grid-view" aria-live="polite">
-            <!-- Member cards inserted here by JS -->
-        </section>
     </main>
 
     <footer class="site-footer">
