@@ -753,3 +753,10 @@ dialog::backdrop {
 .dark-mode .main-nav a.active {
     color: var(--accent);
 }
+
+#join-main-h2 {
+    color: var(--text);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
