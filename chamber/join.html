@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - São Paulo Chamber of Commerce</title>
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <meta name="description" content="Join Page for the São Paulo Chamber of Commerce Website">
+    <meta property="og:title" content="Join - São Paulo Chamber of Commerce">
+    <meta property="og:description"
+        content="Join Page for the São Paulo Chamber of Commerce Website with interactive forms for membership registration.">
+    <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage.webp">
+    <meta property="og:url" content="https://dylanjcm.github.io/wdd231/join.html">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <img src="images/favicon.ico" alt="São Paulo Chamber of Commerce Logo" class="logo" width="32" height="32">
+            <h1 class="site-title">São Paulo Chamber of Commerce</h1>
+
+
+            <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+            <button id="dark-toggle" class="dark-toggle" aria-label="Toggle Dark Mode"><img id="dark-icon"
+                    src="images/circle-half.svg" alt="Toggle Dark Mode" width="28" height="28"></button>
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Menu">
+                <span id="menu-icon">☰</span>
+            </button>
+
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <h1>Join the São Paulo Chamber of Commerce</h1>
+
+        <div class="join-wrapper">
+
+            <!-- FORM AREA (LEFT) -->
+            <form class="join-form" method="get" action="thankyou.html">
+
+                <!-- First Name -->
+                <label>
+                    First Name
+                    <input type="text" name="firstName" required autocomplete="given-name"
+                        title="Enter your first name">
+                </label>
+
+                <!-- Last Name -->
+                <label>
+                    Last Name
+                    <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+                </label>
+
+                <!-- Organizational Title -->
+                <label>
+                    Organizational Title
+                    <input type="text" name="orgTitle" autocomplete="organization-title"
+                        title="Alphabetic, hyphens & spaces. Min 7 chars." pattern="^[A-Za-zÀ-ú\- ]{7,}$">
+                </label>
+
+                <!-- Email -->
+                <label>
+                    Email
+                    <input type="email" name="email" required autocomplete="email" placeholder="example@email.com"
+                        title="Enter a valid email address">
+                </label>
+
+                <!-- Mobile Phone -->
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+                </label>
+
+                <!-- Business Name -->
+                <label>
+                    Business / Organization Name
+                    <input type="text" name="organization" required autocomplete="organization"
+                        title="Enter your business or organization name">
+                </label>
+
+                <!-- Membership Level -->
+                <fieldset>
+                    <legend>Membership Level</legend>
+
+                    <label>Non-profit <input type="radio" name="membership" value="np" required></label>
+                    <label>Bronze <input type="radio" name="membership" value="bronze"></label>
+                    <label>Silver <input type="radio" name="membership" value="silver"></label>
+                    <label>Gold <input type="radio" name="membership" value="gold"></label>
+                </fieldset>
+
+                <!-- Description -->
+                <label id="description">
+                    Business Description
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+
+                <!-- Hidden Timestamp -->
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <!-- Submit -->
+                <input type="submit" value="Apply for Membership">
+            </form>
+
+            <!-- MEMBERSHIP CARDS (RIGHT ON LARGE SCREENS) -->
+            <div class="membership-cards">
+
+                <div class="m-card" id="np-card" data-modal="modal-np">
+                    <h3>Non-Profit Membership</h3>
+                    <a href="#" class="open-modal" data-target="modal-np">Learn More</a>
+                </div>
+
+                <div class="m-card" id="bronze-card" data-modal="modal-bronze">
+                    <h3>Bronze Membership</h3>
+                    <a href="#" class="open-modal" data-target="modal-bronze">Learn More</a>
+                </div>
+
+                <div class="m-card" id="silver-card" data-modal="modal-silver">
+                    <h3>Silver Membership</h3>
+                    <a href="#" class="open-modal" data-target="modal-silver">Learn More</a>
+                </div>
+
+                <div class="m-card" id="gold-card" data-modal="modal-gold">
+                    <h3>Gold Membership</h3>
+                    <a href="#" class="open-modal" data-target="modal-gold">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- MODALS (4) -->
+        <dialog id="modal-np">
+            <h2>Non Profit Membership Benefits</h2>
+            <p>Includes access to non-profit workshops, listings, and community projects.</p>
+            <button class="dialog-close">Close</button>
+        </dialog>
+
+        <dialog id="modal-bronze">
+            <h2>Bronze Membership Benefits</h2>
+            <p>Includes newsletter listing, basic directory entry, and event registration.</p>
+            <button class="dialog-close">Close</button>
+        </dialog>
+
+        <dialog id="modal-silver">
+            <h2>Silver Membership Benefits</h2>
+            <p>All Bronze benefits + discounted events + social media promotion.</p>
+            <button class="dialog-close">Close</button>
+        </dialog>
+
+        <dialog id="modal-gold">
+            <h2>Gold Membership Benefits</h2>
+            <p>All Silver benefits + homepage spotlight + sponsorship opportunities.</p>
+            <button class="dialog-close">Close</button>
+        </dialog>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>São Paulo Chamber of Commerce</p>
+                <p>Email: info@spchamber.example | Phone: +55 11 4000-0000</p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/dylanjcm/wdd231"><img class="social-icon" src="images/github.svg"
+                        alt="github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/dylan-calderon-6354aa339"><img class="social-icon"
+                        src="images/linkedin.svg" alt="linkedin icon" width="32" height="32"></a>
+                <a href="https://wa.me/5511932115550"><img class="social-icon" src="images/whatsapp.svg"
+                        alt="whatsapp icon" width="32" height="32"></a>
+            </div>
+            <div class="dev-info">
+                <p>Prepared by: Dylan Janesky Calderon Machado</p>
+                <p>Course: WDD 231</p>
+                <p>&copy; <span id="copyright-year"></span> São Paulo Chamber of Commerce</p>
+                <p>Last modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

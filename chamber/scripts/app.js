@@ -1,6 +1,7 @@
 // js/app.js
 const DATA_PATH = 'data/members.json';
 
+// Directory page
 document.addEventListener('DOMContentLoaded', () => {
     const gridBtn = document.getElementById('grid-view');
     const listBtn = document.getElementById('list-view');
@@ -202,6 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadMembers();
 });
 
+
+//  Home page
 document.addEventListener("DOMContentLoaded", () => {
 
     // -----------------------------
@@ -341,3 +344,93 @@ async function loadSpotlights() {
         console.error("Spotlight error:", err);
     }
 }
+
+// join page
+
+// timestamp
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("timestamp").value = new Date().toISOString();
+});
+
+// MODALS
+const openLinks = document.querySelectorAll(".open-modal");
+const dialogs = document.querySelectorAll("dialog");
+
+openLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = link.dataset.target;
+        const dlg = document.getElementById(target);
+        dlg.showModal();
+    });
+});
+
+// Close buttons
+document.querySelectorAll(".dialog-close").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.closest("dialog").close();
+    });
+});
+
+// Outside click close
+dialogs.forEach(dlg => {
+    dlg.addEventListener("click", (e) => {
+        const rect = dlg.getBoundingClientRect();
+        if (
+            e.clientX < rect.left ||
+            e.clientX > rect.right ||
+            e.clientY < rect.top ||
+            e.clientY > rect.bottom
+        ) {
+            dlg.close();
+        }
+    });
+});
+
+// Make cards animate on load
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".m-card");
+    cards.forEach((card, i) => {
+        setTimeout(() => card.classList.add("animated"), i * 150);
+    });
+});
+
+
+// thankyou page
+// Read GET parameters
+const params = new URLSearchParams(window.location.search);
+
+const requiredFields = [
+    { key: "firstName", label: "First Name" },
+    { key: "lastName", label: "Last Name" },
+    { key: "email", label: "Email" },
+    { key: "phone", label: "Mobile Phone" },
+    { key: "organization", label: "Business / Organization" },
+    { key: "timestamp", label: "Submitted On" }
+];
+
+const output = document.getElementById("confirmation-list");
+
+// Fill the confirmation list
+requiredFields.forEach(field => {
+    const dt = document.createElement("dt");
+    const dd = document.createElement("dd");
+
+    dt.textContent = field.label;
+
+    let value = params.get(field.key) || "Not provided";
+
+    // Convert timestamp to readable format
+    if (field.key === "timestamp" && value !== "Not provided") {
+        try {
+            value = new Date(value).toLocaleString();
+        } catch(e) { /* fallback */ }
+    }
+
+    dd.textContent = value;
+
+    output.appendChild(dt);
+    output.appendChild(dd);
+});
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - São Paulo Chamber of Commerce</title>
+
+    <meta name="author" content="Dylan Janesky Calderon Machado">
+    <meta name="description" content="Thank you for applying to join the São Paulo Chamber of Commerce">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/app.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <img src="images/favicon.ico" alt="São Paulo Chamber Logo" width="32" height="32">
+        <h1 class="site-title">São Paulo Chamber of Commerce</h1>
+
+        <nav id="main-nav" class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a class="active" href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+
+        <button id="dark-toggle" class="dark-toggle">
+            <img id="dark-icon" src="images/circle-half.svg" width="28" height="28" alt="Toggle dark mode">
+        </button>
+
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false">
+            <span id="menu-icon">☰</span>
+        </button>
+    </div>
+</header>
+
+<main class="container">
+    <h1>Thank You for Applying!</h1>
+    <p>Your membership application was successfully submitted. Here is the information you provided:</p>
+
+    <div class="confirmation-box">
+        <dl id="confirmation-list">
+            <!-- JS will fill this -->
+        </dl>
+    </div>
+
+    <p style="margin-top:1.5rem;">
+        <a id="returnty" href="index.html">Return to Home Page</a>
+    </p>
+</main>
+
+<footer class="site-footer">
+        <div class="container">
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>São Paulo Chamber of Commerce</p>
+                <p>Email: info@spchamber.example | Phone: +55 11 4000-0000</p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/dylanjcm/wdd231"><img class="social-icon" src="images/github.svg"
+                        alt="github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/dylan-calderon-6354aa339"><img class="social-icon"
+                        src="images/linkedin.svg" alt="linkedin icon" width="32" height="32"></a>
+                <a href="https://wa.me/5511932115550"><img class="social-icon" src="images/whatsapp.svg"
+                        alt="whatsapp icon" width="32" height="32"></a>
+            </div>
+            <div class="dev-info">
+                <p>Prepared by: Dylan Janesky Calderon Machado</p>
+                <p>Course: WDD 231</p>
+                <p>&copy; <span id="copyright-year"></span> São Paulo Chamber of Commerce</p>
+                <p>Last modified: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

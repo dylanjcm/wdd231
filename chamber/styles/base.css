@@ -1,6 +1,7 @@
 /* base.css — Mobile First Styles (0–799px) */
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -54,7 +55,8 @@ body {
     background: #fff;
     border-top: 1px solid #ddd;
     width: 100%;
-    top: 100%;     /* ⬅ Pushes it directly below the header */
+    top: 100%;
+    /* ⬅ Pushes it directly below the header */
 }
 
 
@@ -88,6 +90,7 @@ body {
 .main-nav li {
     margin: 0.35rem 0;
     grid-column: 1 / 5;
+    border-bottom: 1px solid #0000002a;
 }
 
 .main-nav a {
@@ -205,65 +208,66 @@ a.active {
 }
 
 .dark-toggle {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-  margin-left: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-left: 1rem;
 }
 
 .dark-mode {
-  --bg: #1a1a1a;
-  --text: #f1f1f1;
-  --card-bg: #2a2a2a;
-  background-color: var(--bg);
-  color: var(--text);
+    --bg: #1a1a1a;
+    --text: #f1f1f1;
+    --card-bg: #2a2a2a;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 .dark-mode .site-header,
-.dark-mode .site-footer, .dark-mode .main-nav {
-  background: #222;
-  color: var(--text);
+.dark-mode .site-footer,
+.dark-mode .main-nav {
+    background: #222;
+    color: var(--text);
 }
 
 .dark-mode .tickets-btn {
-  background: #444;
-  color: #fff;
+    background: #444;
+    color: #fff;
 }
 
 .dark-mode .tickets-btn:hover {
-  background: #555;
+    background: #555;
 }
 
 .hero {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
 }
 
 .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
 }
 
 .tickets-btn {
-  position: absolute;
-  right: 2rem;
-  bottom: 2rem;
-  background: #d1d1d1;
-  padding: .6rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    background: #d1d1d1;
+    padding: .6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .tickets-btn:hover {
-  background: #eeeded;
+    background: #eeeded;
 }
 
 .view-controls button {
@@ -288,7 +292,7 @@ a.active {
 
 .view-controls button:hover {
     transform: scale(1.05);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .view-controls button.active {
@@ -338,6 +342,7 @@ a.active {
 .dev-info {
     margin-left: 10px;
 }
+
 .dark-mode .social a:hover {
     background-color: #555;
 }
@@ -353,7 +358,7 @@ a.active {
     background: var(--card-bg, #ffffff);
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
 .home-card h2 {
@@ -381,7 +386,7 @@ a.active {
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .spotlight-card a {
@@ -405,4 +410,346 @@ a.active {
     justify-content: center;
     border-radius: 6px;
     margin: 0 auto;
+}
+
+.confirmation-box {
+    background: var(--card-bg);
+    padding: 1.3rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+}
+
+.confirmation-box dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: .6rem;
+    column-gap: 1rem;
+}
+
+.confirmation-box dt {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.confirmation-box dd {
+    margin: 0;
+    color: var(--text);
+}
+
+#returnty {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+
+
+
+/* newssss */
+
+/* JOIN PAGE LAYOUT */
+.join-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* Form */
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.join-form label {
+    display: grid;
+    grid-template-columns: .95fr 1.05fr;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.join-form input,
+.join-form textarea,
+.join-form select {
+    margin-top: .25rem;
+    padding: .6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.join-form input[type="text"], .join-form input[type="email"], .join-form input[type="tel"] {
+    width: 100%;
+}
+
+.join-form textarea {
+    resize: vertical;
+}
+
+.join-form input[type="submit"] {
+    margin-top: 1rem;
+    cursor: pointer;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    padding: .75rem;
+    border-radius: 8px;
+    transition: background .3s ease, transform .3s;
+}
+
+.join-form input[type="submit"]:hover {
+    background: var(--accent);
+    transform: scale(1.02);
+}
+
+/* FIELDSET STYLE */
+fieldset {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+fieldset legend {
+    padding: 0 .5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* MEMBERSHIP CARDS */
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Individual Card */
+.m-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    transition: transform .45s ease, opacity .45s ease;
+    opacity: 0;                /* for animation */
+    transform: translateY(20px);
+}
+
+.m-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.m-card p {
+    margin: .4rem 0;
+}
+
+.m-card a {
+    color: #33526b;
+    font-weight: 600;
+}
+
+.m-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ANIMATION: slide up & fade */
+.m-card.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+dialog {
+    border: none;
+    border-radius: 14px;
+    padding: 1.75rem;
+    max-width: 480px;
+    width: 92%;
+    box-shadow: 0 10px 35px rgba(0,0,0,.35);
+    animation: popIn .35s ease forwards;
+    background: var(--card-bg);
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,.45);
+    backdrop-filter: blur(3px);
+}
+
+.dialog-close {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.dialog-close:hover {
+    background: var(--accent);
+}
+
+/* dialog open animation */
+@keyframes popIn {
+    0% { transform: scale(.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* new */
+
+
+
+/* ----------------------------------------------------------
+   DARK MODE — rework for join page
+   ---------------------------------------------------------- */
+
+.dark-mode {
+    --primary: #4DA8DA;         /* Bright blue for contrast */
+    --secondary: #9AD6E3;       /* Soft teal-blue for links */
+    --accent: #F5A623;          /* Warm orange accent for hover/buttons */
+    --bg: #141414;              /* Deep neutral black */
+    --text: #EDEDED;            /* Lite neutral text */
+    --card-bg: #1F1F1F;         /* Card background */
+}
+
+/* Header / Footer */
+.dark-mode .site-header,
+.dark-mode .site-footer {
+    background: #1b1b1b;
+    border-color: #333;
+}
+
+/* NAV */
+.dark-mode .main-nav {
+    background: #1b1b1b;
+    border-top-color: #333;
+}
+
+.dark-mode .main-nav a {
+    color: var(--text);
+}
+
+.dark-mode .main-nav li:hover {
+    background: #2d2d2d;
+}
+
+/* FORM */
+.dark-mode .join-form {
+    background: var(--card-bg);
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+
+.dark-mode .join-form input,
+.dark-mode .join-form textarea,
+.dark-mode .join-form select {
+    background: #2a2a2a;
+    color: var(--text);
+    border: 1px solid #444;
+}
+
+.dark-mode .join-form input:focus,
+.dark-mode .join-form textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* FIELDSET */
+.dark-mode fieldset {
+    border-color: #444;
+}
+
+.dark-mode fieldset legend {
+    color: #5ebff3;
+}
+
+/* SUBMIT BUTTON */
+.dark-mode .join-form input[type="submit"] {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+}
+
+.dark-mode .join-form input[type="submit"]:hover {
+    background: var(--accent);
+    transform: scale(1.02);
+}
+
+/* MEMBERSHIP CARDS */
+.dark-mode .m-card {
+    background: #1f1f1f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+
+.dark-mode .m-card h3 {
+    color: var(--primary);
+}
+
+.dark-mode .m-card p {
+    color: var(--text);
+}
+
+.dark-mode .m-card a {
+    color: var(--secondary);
+}
+
+/* MODALS */
+.dark-mode dialog {
+    background: #1f1f1f;
+    color: var(--text);
+}
+
+.dark-mode .dialog-close {
+    background: var(--primary);
+    color: #fff;
+}
+
+.dark-mode .dialog-close:hover {
+    background: var(--accent);
+}
+
+/* CONFIRMATION PAGE (thankyou) */
+.dark-mode .confirmation-box {
+    background: #1f1f1f;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+
+.dark-mode .confirmation-box dt {
+    color: #5ebff3;
+}
+
+.dark-mode .confirmation-box dd {
+    color: var(--text);
+}
+
+/* LINKS */
+.dark-mode a {
+    color: var(--secondary);
+}
+
+.dark-mode a:hover {
+    color: var(--accent);
+}
+
+/* SOCIAL ICON HOVER */
+.dark-mode .social a {
+    border-color: #555;
+}
+
+.dark-mode .social a:hover {
+    background-color: #333;
+}
+
+.dark-mode .main-nav a.active {
+    color: var(--accent);
 }

@@ -221,3 +221,33 @@ h2 {
 #filter-buttons button:hover {
     background-color: #012632;
 }
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    margin: 0 10px;
+}
+
+#dialog-content h2 {
+    text-align: center;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+}
+
+#close-dialog {
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #00171F;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 40%;
+}
