@@ -893,3 +893,9 @@ dialog::backdrop {
     transform: none;
     filter: none;
 }
+
+#visit-message {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--text);
+}
