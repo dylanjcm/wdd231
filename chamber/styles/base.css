@@ -793,8 +793,8 @@ dialog::backdrop {
     grid-template-areas: 
     "title"
     "image"
-    "address"
     "paragraph"
+    "address"
     "button"
     ;
     gap: .2rem;
