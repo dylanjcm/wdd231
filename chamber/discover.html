@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover — São Paulo Chamber of Commerce</title>
+  <meta name="description" content="Discover São Paulo: attractions, neighborhoods, and important local features." />
+  <meta name="author" content="Dylan Janesky Calderon Machado" />
+  <meta property="og:title" content="Discover São Paulo — São Paulo Chamber" />
+  <meta property="og:description" content="Explore top places and features in São Paulo: culture, parks, markets, and more." />
+  <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage-discover.webp" />
+  <meta property="og:url" content="https://dylanjcm.github.io/wdd231/chamber/discover.html" />
+  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/medium.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/large-discover.css"> <!-- add this file or merge rules into larger.css -->
+
+  <!-- module script because data file is an ES module -->
+  <script type="module" src="scripts/app.js"></script>
+</head>
+<body>
+  <!-- REUSE your header (copied from index/directory pages) -->
+  <!-- header from your site (keeps nav/controls consistent) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="images/favicon.ico" alt="São Paulo Chamber of Commerce Logo" class="logo" width="32" height="32">
+      <h1 class="site-title">São Paulo Chamber of Commerce</h1>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a class="active" href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+      <button id="dark-toggle" class="dark-toggle" aria-label="Toggle Dark Mode">
+        <img id="dark-icon" src="images/circle-half.svg" alt="Toggle Dark Mode" width="28" height="28">
+      </button>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Menu">
+        <span id="menu-icon">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="container discover-grid">
+    <!-- Visit message (localStorage) -->
+    <div id="visit-message" class="visit-message" role="status" aria-live="polite"></div>
+
+    <!-- Page heading -->
+    <header class="discover-hero">
+      <h1>Discover São Paulo</h1>
+      <p>Representative places, historic sites, markets, and neighborhood highlights for visitors and businesses.</p>
+    </header>
+
+    <!-- Cards container (grid areas used via CSS) -->
+    <section id="places-grid" class="places-grid" aria-label="Places of interest">
+      <!-- JS will inject 8 cards here -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="contact">
+        <h2>Contact</h2>
+        <p>São Paulo Chamber of Commerce</p>
+        <p>Email: info@spchamber.example | Phone: +55 11 4000-0000</p>
+      </div>
+      <div class="dev-info">
+        <p>Prepared by: Dylan Janesky Calderon Machado</p>
+        <p>Course: WDD 231</p>
+        <p>&copy; <span id="copyright-year"></span> São Paulo Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

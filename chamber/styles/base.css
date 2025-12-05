@@ -465,7 +465,7 @@ a.active {
     background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .join-form label {
@@ -486,7 +486,9 @@ a.active {
     background: #fff;
 }
 
-.join-form input[type="text"], .join-form input[type="email"], .join-form input[type="tel"] {
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"] {
     width: 100%;
 }
 
@@ -536,9 +538,10 @@ fieldset legend {
     background: var(--card-bg);
     padding: 1rem;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
     transition: transform .45s ease, opacity .45s ease;
-    opacity: 0;                /* for animation */
+    opacity: 0;
+    /* for animation */
     transform: translateY(20px);
 }
 
@@ -573,13 +576,13 @@ dialog {
     padding: 1.75rem;
     max-width: 480px;
     width: 92%;
-    box-shadow: 0 10px 35px rgba(0,0,0,.35);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .35);
     animation: popIn .35s ease forwards;
     background: var(--card-bg);
 }
 
 dialog::backdrop {
-    background: rgba(0,0,0,.45);
+    background: rgba(0, 0, 0, .45);
     backdrop-filter: blur(3px);
 }
 
@@ -602,8 +605,15 @@ dialog::backdrop {
 
 /* dialog open animation */
 @keyframes popIn {
-    0% { transform: scale(.85); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(.85);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* new */
@@ -615,12 +625,18 @@ dialog::backdrop {
    ---------------------------------------------------------- */
 
 .dark-mode {
-    --primary: #4DA8DA;         /* Bright blue for contrast */
-    --secondary: #9AD6E3;       /* Soft teal-blue for links */
-    --accent: #F5A623;          /* Warm orange accent for hover/buttons */
-    --bg: #141414;              /* Deep neutral black */
-    --text: #EDEDED;            /* Lite neutral text */
-    --card-bg: #1F1F1F;         /* Card background */
+    --primary: #4DA8DA;
+    /* Bright blue for contrast */
+    --secondary: #9AD6E3;
+    /* Soft teal-blue for links */
+    --accent: #F5A623;
+    /* Warm orange accent for hover/buttons */
+    --bg: #141414;
+    /* Deep neutral black */
+    --text: #EDEDED;
+    /* Lite neutral text */
+    --card-bg: #1F1F1F;
+    /* Card background */
 }
 
 /* Header / Footer */
@@ -647,7 +663,7 @@ dialog::backdrop {
 /* FORM */
 .dark-mode .join-form {
     background: var(--card-bg);
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 }
 
 .dark-mode .join-form input,
@@ -721,7 +737,7 @@ dialog::backdrop {
 /* CONFIRMATION PAGE (thankyou) */
 .dark-mode .confirmation-box {
     background: #1f1f1f;
-    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
 }
 
 .dark-mode .confirmation-box dt {
@@ -759,4 +775,121 @@ dialog::backdrop {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.places-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Card styling */
+.place-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "image"
+    "address"
+    "paragraph"
+    "button"
+    ;
+    gap: .2rem;
+    text-align: center;
+}
+
+.place-card h2 {
+    margin-top: 0;
+    grid-area: title;
+}
+
+.place-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    grid-area: image;
+}
+
+.place-card p {
+    grid-area: paragraph;
+}
+
+.place-card address {
+    font-style: italic;
+    margin-bottom: .5rem;
+    grid-area: address;
+}
+
+.place-card button {
+    background: #005380;
+    color: #fff;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    grid-area: button;
+    justify-self: start;
+    margin: 0 auto;
+    transition: background .3s ease;
+}
+
+/* Assign named grid areas for each card */
+.place-card:nth-child(1) {
+    grid-area: place1;
+}
+
+.place-card:nth-child(2) {
+    grid-area: place2;
+}
+
+.place-card:nth-child(3) {
+    grid-area: place3;
+}
+
+.place-card:nth-child(4) {
+    grid-area: place4;
+}
+
+.place-card:nth-child(5) {
+    grid-area: place5;
+}
+
+.place-card:nth-child(6) {
+    grid-area: place6;
+}
+
+.place-card:nth-child(7) {
+    grid-area: place7;
+}
+
+.place-card:nth-child(8) {
+    grid-area: place8;
+}
+
+/* -------------------------------------------
+   SMALL SCREENS: 320–640px
+   1 column, cards stacked vertically
+-------------------------------------------- */
+
+.places-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+        "place1"
+        "place2"
+        "place3"
+        "place4"
+        "place5"
+        "place6"
+        "place7"
+        "place8";
+}
+
+/* No hover effects for mobile */
+.place-card img:hover {
+    transform: none;
+    filter: none;
 }

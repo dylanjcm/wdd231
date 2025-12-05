@@ -1,0 +1,16 @@
+@media (min-width: 1025px) {
+
+    .places-grid {
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "place1 place2 place3 place4"
+            "place5 place6 place7 place8";
+    }
+
+    .place-card img:hover {
+        transform: scale(1.08) translateY(-4px);
+        filter: saturate(1.1) brightness(1.1);
+        transition: 0.35s ease;
+    }
+}

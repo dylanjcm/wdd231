@@ -1,0 +1,27 @@
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+    .place-card {
+
+        grid-template-areas:
+        "image title"
+        "image paragraph"
+        "image address"
+        "image button"
+        ;
+
+        text-align: left;
+    }
+
+    /* Hover effect allowed only on medium+ */
+    .place-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        transition: 0.3s ease;
+    }
+
+    .place-card img {
+        width: 230px;
+        height: 180px;
+        object-fit: fill;
+        align-self: center;
+    }
+}
