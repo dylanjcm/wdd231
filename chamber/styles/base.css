@@ -104,10 +104,6 @@ body {
     background: #f0f0f0;
 }
 
-.dark-mode .main-nav li:hover {
-    background: #333;
-}
-
 a.active {
     color: var(--accent);
 }
@@ -213,14 +209,6 @@ a.active {
     font-size: 1.4rem;
     cursor: pointer;
     margin-left: 1rem;
-}
-
-.dark-mode {
-    --bg: #1a1a1a;
-    --text: #f1f1f1;
-    --card-bg: #2a2a2a;
-    background-color: var(--bg);
-    color: var(--text);
 }
 
 .dark-mode .site-header,
@@ -341,10 +329,6 @@ a.active {
 
 .dev-info {
     margin-left: 10px;
-}
-
-.dark-mode .social a:hover {
-    background-color: #555;
 }
 
 .home-sections {
@@ -637,6 +621,8 @@ dialog::backdrop {
     /* Lite neutral text */
     --card-bg: #1F1F1F;
     /* Card background */
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 /* Header / Footer */
@@ -777,12 +763,6 @@ dialog::backdrop {
     margin-bottom: 1rem;
 }
 
-.places-grid {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem 0;
-}
-
 /* Card styling */
 .place-card {
     background: var(--card-bg);
@@ -876,7 +856,9 @@ dialog::backdrop {
 
 .places-grid {
     grid-template-columns: 1fr;
-
+    display: grid;
+    gap: 1rem;
+    padding: 1rem 0;
     grid-template-areas:
         "place1"
         "place2"
@@ -898,4 +880,9 @@ dialog::backdrop {
     margin-top: 0.5rem;
     font-style: italic;
     color: var(--text);
+}
+
+#discover-h2 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
 }
