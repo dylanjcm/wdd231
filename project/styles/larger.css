@@ -1,0 +1,53 @@
+@media (min-width:900px) {
+    .nav-list {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width:899px) {
+    .hamburger {
+        display: block;
+        width: 44px;
+        height: 44px;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 1rem;
+        background: var(--card);
+        padding: .5rem;
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-list li {
+        margin: 0.5rem 2rem; 
+        border-bottom: 1px solid #999999;
+    }
+
+    .nav-list.open {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

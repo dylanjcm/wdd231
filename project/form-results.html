@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Form Results</title>
+  <meta name="description" content="Submitted form results for Recipe Haven.">
+  <meta name="author" content="Dylan Janesky Calderon Machado">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <button id="hamburger" class="hamburger" aria-controls="primary-menu" aria-expanded="false"
+        aria-label="Open menu">☰</button>
+      <a class="brand" href="index.html">Recipe Haven</a>
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-results">
+      <h1>Form Submission Results</h1>
+      <p>Here is the information you submitted:</p>
+      <div id="results" class="results-box"></div>
+      <p><a class="btn" href="contact.html">Back to Form</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>&copy; 2025 Recipe Haven — Created by Dylan Janesky</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="https://youtu.be/YOUR_VIDEO_LINK">Project Video</a></p>
+  </footer>
+
+  <script>
+    const resultsEl = document.getElementById('results');
+    const params = new URLSearchParams(location.search);
+
+    if ([...params].length === 0) {
+      resultsEl.innerHTML = "<p>No form submission detected.</p>";
+    } else {
+      const dl = document.createElement("dl");
+      dl.classList.add("results-list");
+
+      [...params.entries()].forEach(([key, value]) => {
+        const dt = document.createElement("dt");
+        dt.textContent = key;
+        const dd = document.createElement("dd");
+        dd.textContent = value;
+        dl.appendChild(dt);
+        dl.appendChild(dd);
+      });
+
+      resultsEl.appendChild(dl);
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Discover — São Paulo Chamber of Commerce</title>
+    <meta name="description" content="Discover São Paulo: attractions, neighborhoods, and important local features." />
+    <meta name="author" content="Dylan Janesky Calderon Machado" />
+    <meta property="og:title" content="Discover São Paulo — São Paulo Chamber" />
+    <meta property="og:description"
+        content="Explore top places and features in São Paulo: culture, parks, markets, and more." />
+    <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage-discover.webp" />
+    <meta property="og:url" content="https://dylanjcm.github.io/wdd231/chamber/discover.html" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/contact.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <button id="hamburger" class="hamburger" aria-controls="primary-menu" aria-expanded="false"
+                aria-label="Open menu">☰</button>
+            <a class="brand" href="index.html">Recipe Haven</a>
+            <ul id="primary-menu" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container contact-page">
+        <h1>Contact / Suggest a Recipe</h1>
+
+        <form id="contact-form" method="get" action="form-results.html" novalidate>
+            <div class="form-row">
+                <label for="name">Name<span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email<span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="category">Recipe Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select...</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                    <option value="dessert">Dessert</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="title">Recipe Title</label>
+                <input id="title" name="title" type="text">
+            </div>
+
+            <div class="form-row">
+                <label for="message">Suggestion / Message</label>
+                <textarea id="message" name="message" rows="6"></textarea>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer container">
+        <p>&copy; 2025 Recipe Haven — Created by Dylan Janesky</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="https://youtu.be/YOUR_VIDEO_LINK">Project Video</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "title": "Easy Tomato Pasta",
+            "image": "images/recipes/tomato-pasta.jpg",
+            "category": "dinner",
+            "difficulty": "easy",
+            "time": 25,
+            "description": "Simple pasta in a fresh tomato sauce.",
+            "ingredients": [
+                "pasta",
+                "tomatoes",
+                "garlic",
+                "olive oil",
+                "basil",
+                "salt"
+            ],
+            "instructions": "Cook pasta. Sauté garlic, add chopped tomatoes and simmer. Toss pasta with sauce and basil."
+        },
+        {
+            "id": 2,
+            "title": "One-Pan Chicken & Veggies",
+            "image": "images/recipes/chicken-veggies.jpg",
+            "category": "dinner",
+            "difficulty": "easy",
+            "time": 35,
+            "description": "Roasted chicken with seasonal vegetables.",
+            "ingredients": [
+                "chicken thighs",
+                "potatoes",
+                "carrots",
+                "olive oil",
+                "rosemary",
+                "salt",
+                "pepper"
+            ],
+            "instructions": "Toss veggies and chicken with oil and seasonings. Roast at 200°C until cooked."
+        },
+        {
+            "id": 3,
+            "title": "Avocado Toast",
+            "image": "images/recipes/avocado-toast.jpg",
+            "category": "breakfast",
+            "difficulty": "easy",
+            "time": 10,
+            "description": "Creamy avocado on toasted bread.",
+            "ingredients": [
+                "bread",
+                "avocado",
+                "lemon",
+                "salt",
+                "pepper"
+            ],
+            "instructions": "Toast bread, smash avocado with lemon, spread and season."
+        },
+        {
+            "id": 4,
+            "title": "Greek Yogurt Parfait",
+            "image": "images/recipes/parfait.jpg",
+            "category": "breakfast",
+            "difficulty": "easy",
+            "time": 7,
+            "description": "Layered yogurt, fruit, and granola.",
+            "ingredients": [
+                "greek yogurt",
+                "honey",
+                "berries",
+                "granola"
+            ],
+            "instructions": "Layer ingredients in a glass and serve chilled."
+        },
+        {
+            "id": 5,
+            "title": "Quick Stir-Fry Noodles",
+            "image": "images/recipes/stirfry-noodles.jpg",
+            "category": "lunch",
+            "difficulty": "medium",
+            "time": 20,
+            "description": "Veggie-packed stir-fry with noodles.",
+            "ingredients": [
+                "noodles",
+                "soy sauce",
+                "mixed vegetables",
+                "garlic",
+                "sesame oil"
+            ],
+            "instructions": "Cook noodles. Stir-fry veggies, add sauce and noodles; toss."
+        },
+        {
+            "id": 6,
+            "title": "Classic Pancakes",
+            "image": "images/recipes/pancakes.jpg",
+            "category": "breakfast",
+            "difficulty": "easy",
+            "time": 20,
+            "description": "Fluffy pancakes for weekend breakfasts.",
+            "ingredients": [
+                "flour",
+                "milk",
+                "egg",
+                "baking powder",
+                "sugar",
+                "butter"
+            ],
+            "instructions": "Mix batter, cook on griddle, flip when bubbly."
+        },
+        {
+            "id": 7,
+            "title": "Vegetable Curry",
+            "image": "images/recipes/veg-curry.jpg",
+            "category": "dinner",
+            "difficulty": "medium",
+            "time": 40,
+            "description": "Comforting curry with seasonal vegetables.",
+            "ingredients": [
+                "onion",
+                "tomato",
+                "mixed vegetables",
+                "curry powder",
+                "coconut milk"
+            ],
+            "instructions": "Sauté aromatics, add spices, veggies, and coconut milk; simmer."
+        },
+        {
+            "id": 8,
+            "title": "Garlic Shrimp",
+            "image": "images/recipes/garlic-shrimp.jpg",
+            "category": "dinner",
+            "difficulty": "easy",
+            "time": 15,
+            "description": "Quick sautéed shrimp in garlic butter.",
+            "ingredients": [
+                "shrimp",
+                "garlic",
+                "butter",
+                "lemon",
+                "parsley"
+            ],
+            "instructions": "Sear shrimp in butter and garlic until pink; finish with lemon."
+        },
+        {
+            "id": 9,
+            "title": "Caprese Salad",
+            "image": "images/recipes/caprese.jpg",
+            "category": "lunch",
+            "difficulty": "easy",
+            "time": 10,
+            "description": "Fresh tomatoes, mozzarella, and basil.",
+            "ingredients": [
+                "tomato",
+                "mozzarella",
+                "basil",
+                "olive oil",
+                "salt"
+            ],
+            "instructions": "Arrange slices, drizzle with oil, season, and serve."
+        },
+        {
+            "id": 10,
+            "title": "Banana Bread",
+            "image": "images/recipes/banana-bread.jpg",
+            "category": "dessert",
+            "difficulty": "medium",
+            "time": 60,
+            "description": "Moist banana loaf perfect for snacks.",
+            "ingredients": [
+                "bananas",
+                "flour",
+                "eggs",
+                "sugar",
+                "baking soda",
+                "butter"
+            ],
+            "instructions": "Mix wet and dry ingredients separately, combine, and bake."
+        },
+        {
+            "id": 11,
+            "title": "Tomato Soup",
+            "image": "images/recipes/tomato-soup.jpg",
+            "category": "lunch",
+            "difficulty": "easy",
+            "time": 30,
+            "description": "Creamy tomato soup served with bread.",
+            "ingredients": [
+                "tomatoes",
+                "onion",
+                "garlic",
+                "stock",
+                "cream"
+            ],
+            "instructions": "Cook tomatoes and aromatics, blend, and finish with cream."
+        },
+        {
+            "id": 12,
+            "title": "Grilled Cheese",
+            "image": "images/recipes/grilled-cheese.jpg",
+            "category": "lunch",
+            "difficulty": "easy",
+            "time": 10,
+            "description": "Crispy golden bread with melted cheese.",
+            "ingredients": [
+                "bread",
+                "cheese",
+                "butter"
+            ],
+            "instructions": "Butter bread, assemble with cheese, and grill until golden."
+        },
+        {
+            "id": 13,
+            "title": "Roasted Veggie Bowl",
+            "image": "images/recipes/roasted-bowl.jpg",
+            "category": "dinner",
+            "difficulty": "easy",
+            "time": 35,
+            "description": "Balanced bowl with grains and roasted vegetables.",
+            "ingredients": [
+                "quinoa",
+                "broccoli",
+                "sweet potato",
+                "olive oil",
+                "tahini"
+            ],
+            "instructions": "Roast veggies, cook grains, assemble bowls, drizzle tahini."
+        },
+        {
+            "id": 14,
+            "title": "Chocolate Mug Cake",
+            "image": "images/recipes/mug-cake.jpg",
+            "category": "dessert",
+            "difficulty": "easy",
+            "time": 5,
+            "description": "Single-serving cake made in the microwave.",
+            "ingredients": [
+                "flour",
+                "cocoa",
+                "milk",
+                "sugar",
+                "oil",
+                "baking powder"
+            ],
+            "instructions": "Mix in a mug and microwave 1–2 minutes."
+        },
+        {
+            "id": 15,
+            "title": "Mango Smoothie",
+            "image": "images/recipes/mango-smoothie.jpg",
+            "category": "breakfast",
+            "difficulty": "easy",
+            "time": 5,
+            "description": "Refreshing smoothie with mango and yogurt.",
+            "ingredients": [
+                "mango",
+                "yogurt",
+                "milk",
+                "honey",
+                "ice"
+            ],
+            "instructions": "Blend until smooth; serve cold."
+        }
+    ]
+}

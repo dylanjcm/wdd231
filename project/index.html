@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Discover — São Paulo Chamber of Commerce</title>
+    <meta name="description" content="Discover São Paulo: attractions, neighborhoods, and important local features." />
+    <meta name="author" content="Dylan Janesky Calderon Machado" />
+    <meta property="og:title" content="Discover São Paulo — São Paulo Chamber" />
+    <meta property="og:description"
+        content="Explore top places and features in São Paulo: culture, parks, markets, and more." />
+        <meta property="og:image" content="https://dylanjcm.github.io/wdd231/chamber/ogimage-discover.webp" />
+        <meta property="og:url" content="https://dylanjcm.github.io/wdd231/chamber/discover.html" />
+        <link rel="icon" href="images/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/recipes.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <button id="hamburger" class="hamburger" aria-controls="primary-menu" aria-expanded="false"
+                aria-label="Open menu">☰</button>
+            <img src="images/chef-hat.svg" alt="chef-icon" class="nav-icon">
+            <a class="brand" href="index.html" aria-label="Recipe Haven homepage">Recipe Haven</a>
+            <ul id="primary-menu" class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Simple Recipes Hub</h1>
+            <p>Discover easy, tested recipes for everyday cooking — searchable, responsive, and accessible.</p>
+            <p><a class="btn" href="recipes.html">Browse Recipes</a></p>
+        </section>
+
+        <section class="featured" aria-labelledby="featured-title">
+            <h2 id="featured-title">Featured Recipes</h2>
+            <div id="featured-container" class="recipe-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="about" aria-labelledby="about-title">
+            <h2 id="about-title">About This Project</h2>
+            <p>This project demonstrates HTML, CSS, and JavaScript skills: fetching JSON data, dynamic DOM generation,
+                accessible modal dialogs, and localStorage.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <p>&copy; 2025 Recipe Haven — Created by Dylan Janesky</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="https://youtu.be/YOUR_VIDEO_LINK">Project Video</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
