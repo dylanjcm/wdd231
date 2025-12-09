@@ -165,6 +165,77 @@ dialog {
     width: min(700px, 95%);
 }
 
+dt {
+    font-weight: 800;
+}
+
+dd {
+    margin: 0 0 1rem 0;
+}
+
+#results {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #f9f9f9;
+    max-width: 600px;
+}
+
+/* Modal: fade in + backdrop + layout */
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    width: min(700px, 95%);
+    max-width: 95%;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: none;
+    /* we use animation when opening */
+}
+
+/* backdrop style */
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(1px);
+}
+
+/* fade-in animation */
+@keyframes dialog-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* when dialog is open, run the animation */
+dialog[open] {
+    animation: dialog-fade-in 180ms ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ensure modal content is scrollable if tall */
+dialog>div {
+    max-height: 70vh;
+    overflow: auto;
+    padding-right: 0.25rem;
+}
+
+/* optional: style the dialog action buttons row */
+.dialog-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+}
+
+
 /* Small screens adjustments */
 @media (min-width:600px) {
     .recipe-grid {

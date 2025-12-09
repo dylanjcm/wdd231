@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Easy Tomato Pasta",
-            "image": "images/recipes/tomato-pasta.jpg",
+            "image": "images/recipes/tomato-pasta.webp",
             "category": "dinner",
             "difficulty": "easy",
             "time": 25,
@@ -21,7 +21,7 @@
         {
             "id": 2,
             "title": "One-Pan Chicken & Veggies",
-            "image": "images/recipes/chicken-veggies.jpg",
+            "image": "images/recipes/chicken-veggies.webp",
             "category": "dinner",
             "difficulty": "easy",
             "time": 35,
@@ -40,7 +40,7 @@
         {
             "id": 3,
             "title": "Avocado Toast",
-            "image": "images/recipes/avocado-toast.jpg",
+            "image": "images/recipes/avocado-toast.webp",
             "category": "breakfast",
             "difficulty": "easy",
             "time": 10,
@@ -57,7 +57,7 @@
         {
             "id": 4,
             "title": "Greek Yogurt Parfait",
-            "image": "images/recipes/parfait.jpg",
+            "image": "images/recipes/parfait.webp",
             "category": "breakfast",
             "difficulty": "easy",
             "time": 7,
@@ -73,7 +73,7 @@
         {
             "id": 5,
             "title": "Quick Stir-Fry Noodles",
-            "image": "images/recipes/stirfry-noodles.jpg",
+            "image": "images/recipes/stirfry-noodles.webp",
             "category": "lunch",
             "difficulty": "medium",
             "time": 20,
@@ -90,7 +90,7 @@
         {
             "id": 6,
             "title": "Classic Pancakes",
-            "image": "images/recipes/pancakes.jpg",
+            "image": "images/recipes/pancakes.webp",
             "category": "breakfast",
             "difficulty": "easy",
             "time": 20,
@@ -108,7 +108,7 @@
         {
             "id": 7,
             "title": "Vegetable Curry",
-            "image": "images/recipes/veg-curry.jpg",
+            "image": "images/recipes/veg-curry.webp",
             "category": "dinner",
             "difficulty": "medium",
             "time": 40,
@@ -125,7 +125,7 @@
         {
             "id": 8,
             "title": "Garlic Shrimp",
-            "image": "images/recipes/garlic-shrimp.jpg",
+            "image": "images/recipes/garlic-shrimp.webp",
             "category": "dinner",
             "difficulty": "easy",
             "time": 15,
@@ -142,7 +142,7 @@
         {
             "id": 9,
             "title": "Caprese Salad",
-            "image": "images/recipes/caprese.jpg",
+            "image": "images/recipes/caprese.webp",
             "category": "lunch",
             "difficulty": "easy",
             "time": 10,
@@ -159,7 +159,7 @@
         {
             "id": 10,
             "title": "Banana Bread",
-            "image": "images/recipes/banana-bread.jpg",
+            "image": "images/recipes/banana-bread.webp",
             "category": "dessert",
             "difficulty": "medium",
             "time": 60,
@@ -177,7 +177,7 @@
         {
             "id": 11,
             "title": "Tomato Soup",
-            "image": "images/recipes/tomato-soup.jpg",
+            "image": "images/recipes/tomato-soup.webp",
             "category": "lunch",
             "difficulty": "easy",
             "time": 30,
@@ -194,7 +194,7 @@
         {
             "id": 12,
             "title": "Grilled Cheese",
-            "image": "images/recipes/grilled-cheese.jpg",
+            "image": "images/recipes/grilled-cheese.webp",
             "category": "lunch",
             "difficulty": "easy",
             "time": 10,
@@ -209,7 +209,7 @@
         {
             "id": 13,
             "title": "Roasted Veggie Bowl",
-            "image": "images/recipes/roasted-bowl.jpg",
+            "image": "images/recipes/roasted-bowl.webp",
             "category": "dinner",
             "difficulty": "easy",
             "time": 35,
@@ -226,7 +226,7 @@
         {
             "id": 14,
             "title": "Chocolate Mug Cake",
-            "image": "images/recipes/mug-cake.jpg",
+            "image": "images/recipes/mug-cake.webp",
             "category": "dessert",
             "difficulty": "easy",
             "time": 5,
@@ -239,12 +239,12 @@
                 "oil",
                 "baking powder"
             ],
-            "instructions": "Mix in a mug and microwave 1–2 minutes."
+            "instructions": "Mix in a mug and microwave 1-2 minutes."
         },
         {
             "id": 15,
             "title": "Mango Smoothie",
-            "image": "images/recipes/mango-smoothie.jpg",
+            "image": "images/recipes/mango-smoothie.webp",
             "category": "breakfast",
             "difficulty": "easy",
             "time": 5,

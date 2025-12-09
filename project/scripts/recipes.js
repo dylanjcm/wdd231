@@ -1,4 +1,3 @@
-// recipes.js (ES Module style)
 const dataUrl = 'data/recipes.json';
 
 async function fetchRecipes() {
@@ -9,7 +8,7 @@ async function fetchRecipes() {
         return data.recipes || [];
     } catch (err) {
         console.error('Fetch error:', err);
-        return []; // graceful fallback
+        return [];
     }
 }
 
@@ -18,7 +17,6 @@ function createCard(recipe) {
     card.className = 'recipe-card';
     card.setAttribute('role', 'listitem');
 
-    // template literal with at least 4 properties: title, image, category, difficulty
     card.innerHTML = `
     <img src="${recipe.image}" alt="${recipe.title} image" loading="lazy" width="240" height="160">
     <div>
@@ -36,7 +34,6 @@ function populateGrid(recipes, container) {
     recipes.forEach(r => container.appendChild(createCard(r)));
 }
 
-// Build categories
 function buildCategoryOptions(recipes, selectEl) {
     const categories = [...new Set(recipes.map(r => r.category))];
     categories.forEach(c => {
@@ -47,7 +44,6 @@ function buildCategoryOptions(recipes, selectEl) {
     });
 }
 
-// Modal & favorites
 function openModal(recipe) {
     const modal = document.getElementById('recipe-modal') || document.createElement('dialog');
     const body = document.getElementById('modal-body') || modal.querySelector('#modal-body');
@@ -62,7 +58,6 @@ function openModal(recipe) {
     <p>${recipe.instructions}</p>
   `;
 
-    // favorite button state
     const favBtn = document.getElementById('toggle-favorite');
     if (favBtn) {
         const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
@@ -73,7 +68,6 @@ function openModal(recipe) {
         };
     }
 
-    // show dialog
     if (!modal.open) {
         modal.showModal();
     }
@@ -88,34 +82,35 @@ function toggleFavorite(id) {
 }
 
 function wireUpOpenButtons(container, recipes) {
-    container.addEventListener('click', (e) => {
-        if (e.target.matches('.open-btn')) {
-            const id = e.target.dataset.id;
-            const recipe = recipes.find(r => String(r.id) === String(id));
-            if (recipe) openModal(recipe);
-        }
+    if (!container) return;
+
+    container.addEventListener("click", (e) => {
+        const btn = e.target.closest(".open-btn");
+        if (!btn) return;
+
+        const id = btn.dataset.id;
+        const recipe = recipes.find(r => String(r.id) === String(id));
+
+        if (recipe) openModal(recipe);
     });
 }
 
-// init on pages (works for index & recipes)
 (async function initRecipesPage() {
     const recipes = await fetchRecipes();
 
-    // featured container on index page
     const featuredContainer = document.getElementById('featured-container');
     if (featuredContainer) {
-        // show first 3 as featured
         populateGrid(recipes.slice(0, 3), featuredContainer);
+        wireUpOpenButtons(featuredContainer, recipes);
     }
 
-    const recipeGrid = document.getElementById('recipe-grid');
-    if (!recipeGrid) return; // no recipes page content
 
-    // populate, filter, search
+    const recipeGrid = document.getElementById('recipe-grid');
+    if (!recipeGrid) return;
+
     populateGrid(recipes, recipeGrid);
     buildCategoryOptions(recipes, document.getElementById('categoryFilter'));
 
-    // search and filter
     const search = document.getElementById('search');
     const categoryFilter = document.getElementById('categoryFilter');
     const clearBtn = document.getElementById('clear-filters');
@@ -139,11 +134,16 @@ function wireUpOpenButtons(container, recipes) {
         populateGrid(recipes, recipeGrid);
     });
 
-    // modal controls
     const modal = document.getElementById('recipe-modal');
     const closeModal = document.getElementById('close-modal');
     closeModal?.addEventListener('click', () => modal.close());
 
-    // wire open buttons
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.close();
+        }
+    });
+
+
     wireUpOpenButtons(recipeGrid, recipes);
 })();
